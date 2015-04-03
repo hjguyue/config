@@ -29,6 +29,8 @@ set ic
 
 " pastetoggle
 set pastetoggle=<f5>
+" paste to system
+set clipboard+=unnamed
 
 " visualbeep
 "set vb t_vb=
@@ -152,13 +154,19 @@ let g:ycm_filetype_blacklist =
 \{'tagbar' : 1, 'qf' : 1, 'notes' : 1, 'markdown' : 1, 'unite' : 1, 'text' : 1, 'vimwiki' : 1, 'gitcommit' : 1,}
 set completeopt-=preview
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_goto_buffer_command = 'new-tab'  " Default: same-buffer
 
-" ultisnips Plugin:
+" Ultisnips Plugin:
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
+" Grep:
+set switchbuf+=usetab,newtab
+nnoremap <silent><C-G><C-R> :copen<CR>
+nnoremap <silent><C-G><C-G> :cclose<CR>
 
 " key map
 "set timeoutlen=100
@@ -181,8 +189,16 @@ inoremap <c-right> <esc>g_a
 inoremap <c-h> <esc>^i
 inoremap <c-l> <esc>g_a
 
+" tab
 map gw <esc>:tabclose<CR>
 map gn <esc>:tabnew<CR>
+
+" save
+inoremap <f8> <esc>:w<CR>
+nnoremap <f8> <esc>:w<CR>
+
+" avoid replacement while pasting
+xnoremap p pgvy
 
 noh
 
