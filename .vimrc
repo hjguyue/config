@@ -197,6 +197,10 @@ map gn <esc>:tabnew<CR>
 inoremap <f8> <esc>:w<CR>
 nnoremap <f8> <esc>:w<CR>
 
+" command
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
 " avoid replacement while pasting
 xnoremap p pgvy
 
