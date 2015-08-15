@@ -154,7 +154,7 @@ let g:ycm_filetype_blacklist =
 \{'tagbar' : 1, 'qf' : 1, 'notes' : 1, 'markdown' : 1, 'unite' : 1, 'text' : 1, 'vimwiki' : 1, 'gitcommit' : 1,}
 set completeopt-=preview
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_goto_buffer_command = 'new-tab'  " Default: same-buffer
+let g:ycm_goto_buffer_command = 'same-buffer'  " Default: same-buffer, other: new-tab
 
 " Ultisnips Plugin:
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -169,12 +169,15 @@ nnoremap <silent><C-G><C-R> :copen<CR>
 nnoremap <silent><C-G><C-G> :cclose<CR>
 
 " key map
+inoremap <c-o> <esc>
+vnoremap <c-o> <esc>
+
 "set timeoutlen=100
-inoremap ( ()<esc>i
-inoremap [ []<esc>i
-inoremap { {}<esc>i
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
+"inoremap ( ()<esc>i
+"inoremap [ []<esc>i
+"inoremap { {}<esc>i
+"inoremap ' ''<esc>i
+"inoremap " ""<esc>i
 
 nnoremap <c-left> ^
 nnoremap <c-right> g_
