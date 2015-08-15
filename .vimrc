@@ -155,6 +155,7 @@ let g:ycm_filetype_blacklist =
 set completeopt-=preview
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_goto_buffer_command = 'same-buffer'  " Default: same-buffer, other: new-tab
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 " Ultisnips Plugin:
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
