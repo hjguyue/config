@@ -13,9 +13,9 @@ set scrolloff=3
 
 " tab
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " indent
 set ai
@@ -141,6 +141,9 @@ map <C-n> :NERDTreeToggle<CR>
 " NERDTreeTabs Plugin:
 map <C-t> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
+
+" POWERLINE Plugin:
+let g:Powerline_symbols = 'fancy'
 
 " YouCompleteMe Plugin:
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
