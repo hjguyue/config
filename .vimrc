@@ -88,8 +88,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
 
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'gcmt/taboo.vim'                  " simplify tab name
 
@@ -143,7 +144,9 @@ map <C-t> :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
 
 " POWERLINE Plugin:
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
+" VIM-airline:
+let g:airline_powerline_fonts = 1
 
 " YouCompleteMe Plugin:
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
