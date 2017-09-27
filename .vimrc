@@ -30,7 +30,9 @@ set ic
 " pastetoggle
 set pastetoggle=<f5>
 " paste to system
-set clipboard+=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 " visualbeep
 "set vb t_vb=
@@ -39,8 +41,9 @@ set clipboard+=unnamed
 syn on
 
 " color 
-let g:molokai_original = 1
-color molokai 
+syntax enable
+set background=dark
+colorscheme solarized
 set cursorline
 hi Normal ctermbg=None
 hi LineNr ctermfg=245 ctermbg=None
@@ -87,6 +90,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'altercation/vim-colors-solarized'
 
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'bling/vim-airline'
@@ -215,4 +219,3 @@ cnoremap <C-e> <End>
 xnoremap p pgvy
 
 noh
-
