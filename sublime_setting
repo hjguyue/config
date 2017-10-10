@@ -46,4 +46,5 @@
   { "keys": ["ctrl+o"], "command": "jump_back" },
   { "keys": ["ctrl+i"], "command": "jump_forward" },
   { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["super+ctrl+p"], "command": "copy_path" },
 ]
