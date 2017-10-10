@@ -51,7 +51,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,3 +87,11 @@ source $ZSH/oh-my-zsh.sh
 alias vim="/usr/local/bin/vim"
 alias vi="/usr/local/bin/vim"
 alias rails="/usr/local/bin/rails"
+
+# for history substring match
+bindkey '\eOA' history-substring-search-up # or ^[OA
+bindkey '\eOB' history-substring-search-down # or ^[OB
+
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export PATH=${JAVA_HOME}/bin:$PATH
+
