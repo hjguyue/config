@@ -188,7 +188,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%(6~|%-1~/…/%4~|%5~)'
+  prompt_segment blue black '%(6~|%-1~/…/%3~|%5~)'
 }
 
 # Virtualenv: current working virtualenv
